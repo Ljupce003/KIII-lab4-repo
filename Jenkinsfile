@@ -11,6 +11,7 @@ pipeline {
         stage('Clone repository') {
             steps {
                 git branch: 'main',
+                    credentialsId: 'github-token',
                     url: 'https://github.com/Ljupce003/KIII-lab4-repo.git'
             }
         }
